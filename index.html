@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТР-24 Васянович Єлизавета Володимирівна 4 Варіант</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    </style>
+</head>
+<body>
+   
+    <header>
+        <div class="header-cont">
+            <div class="header-info">
+                <h1>ТР-24 Васянович Єлизавета Володимирівна<br>Тема тесту: Блочна модель і позиціонування</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- форма реєстрації-->
+        <div class="main-cont">
+            <button id="button_pochati" onclick="start()">
+                <p>Почати тест</p>
+            </button>
+            <div id="registr" hidden>
+                <form id="regForm" onsubmit="return false;">
+                    <label >
+                        <h2>Перед початком теста<br> потрібно заповнити наступні поля:</h2>
+                    </label>
+                    <div class="textInput">
+                        <div class="reg__PIB">
+                            <p> <input id="area1" class="aa" type="text" required placeholder="ПІБ учня"
+                                    name="PIB"></p>
+                        </div>
+                        <div class="reg__group">
+                            <p> <input id="area2" class="aa" type="text" required placeholder="Група" name="group"></p>
+                        </div>
+                    </div>
+                    <button id="registr__button" onclick="blank()">
+                        <p>Реєстрація</p>
+                    </button>
+                </form>
+            </div>
+            <div id="test" hidden>
+
+                <!-- 1 питання-->
+                <div id="Pitannya1" hidden>
+                    <h1>1 Запитання</h1>
+                    <form id="Pitannya1_form">
+                        <label >
+                            <h3>Які складові входять до блочної моделі CSS?</h3>
+                        </label>
+                        <div class="Pitannya_var_vidpovidi">
+                            <label for="pick1"><input type="radio" name="pick" id="pick11"> Padding, Border, Margin</label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick12"> Width, Height, Background</label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick13"> Color, Font, Text-align</label>
+                            <label for="pick4"><input type="radio" name="pick" id="pick14"> Display, Float, Position</label>
+
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 2 питання-->
+                <div id="Pitannya2" hidden>
+                    <h1>2 Запитання</h1>
+                    <form  id="Pitannya2_form">
+                        <label >
+                            <h3>Які з наступних властивостей входять до складової "Margin" блочної моделі?</h3>
+                        </label>
+                        <div class="Pitannya2_vidpovidi_checkbox">
+                            <label><input type="checkbox" id="pick21">Auto</label>
+                            <label><input type="checkbox" id="pick22">Color</label>
+                            <label><input type="checkbox" id="pick23">Top</label>
+                            <label><input type="checkbox" id="pick24">Border</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 3 питання-->
+                <div id="Pitannya3" hidden>
+                    <h1>3 Запитання</h1>
+                    <form id="Pitannya3_form">
+                        <label >
+                            <h3>Які з наступних властивостей входять до складових "Flexbox" у CSS?</h3>
+                        </label>
+                        <div class="Pitannya3_5_vidpovidi_checkbox">
+                            <label><input type="checkbox" id="pick31">justify-content</label>
+                            <label><input type="checkbox" id="pick32">align-items</label>
+                            <label><input type="checkbox" id="pick33">flex-direction</label>
+                            <label><input type="checkbox" id="pick34">padding</label>
+                        </div>
+                    </form>
+                </div>
+
+               <!-- 4 питання-->
+               <div id="Pitannya4" hidden>
+                <h1>4 Запитання</h1>
+                <form id="Pitannya4_form">
+                    <div class="Pitannya4_vidpovidi_select">
+                        <label>
+                            Яка властивість використовується для зміни порядку накладання елементів без використання позиціонування?
+                            <select id="select1">
+                                <option value="pick41" id="pick41">position</option>
+                                <option value="pick42" id="pick42">order</option>
+                                <option value="pick43" id="pick43">z-order</option>
+                            </select>
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 5 питання-->
+            <div id="Pitannya5" hidden>
+                <h1>5 Запитання</h1>
+                <form id="Pitannya5_form">
+                    <label >
+                        <h3>Як визначити елемент з фіксованою позицією на сторінці?</h3>
+                    </label>
+                    <div class="Pitannya3_5_vidpovidi_checkbox">
+                        <label><input type="checkbox" id="pick51">position: relative</label>
+                        <label><input type="checkbox" id="pick52">position: absolute</label>
+                        <label><input type="checkbox" id="pick53">position: fixed</label>
+                        
+                    </div>
+                </form>
+            </div>
+
+               <!-- 6 питання-->
+                <div id="Pitannya6" hidden>
+                    <h1>6 Запитання</h1>
+                    <form id="Pitannya6_form">
+                        <div class="fixedElements">
+                            <label>
+                                <h3>Розставте опис у правильному порядку відповідно до властивостей CSS:</h3>
+                            </label>
+                        </div>
+                        <div class="Pitannya6_vidpovidnist" id="dropContainers">
+                            <div class="Pitannya6__boxs1" id="Paddingontainer" ondrop="drop(event)" ondragover="allowDrop(event)">Padding
+                                <hr id="hr1">
+                            </div>
+                            <div class="Pitannya6__boxs2" id="ContentContainer" ondrop="drop(event)" ondragover="allowDrop(event)">Content
+                                <hr id="hr2">
+                            </div>
+                            <div class="Pitannya6__boxs3" id="MarginContainer" ondrop="drop(event)" ondragover="allowDrop(event)">Margin
+                                <hr id="hr3">
+                            </div>
+                        </div>
+                        <div class="Pitannya6_vsi_vidpovidi">
+                            <div class="Pitannya6_vidpovid" id="drag1" draggable="true" ondragstart="drag(event)">Відступи навколо вмісту елементу</div>
+                            <div class="Pitannya6_vidpovid" id="drag2" draggable="true" ondragstart="drag(event)">Змінює вміст елемента після формування сторінки</div>
+                            <div class="Pitannya6_vidpovid" id="drag3" draggable="true" ondragstart="drag(event)">Зовнішній відступ</div>
+                        </div>
+                    </form>
+                </div>
+
+
+
+                <!-- 7 питання-->
+                <div id="Pitannya7" hidden>
+                    <h1>7 Запитання</h1>
+                    <form  id="Pitannya7_form">
+                        <label>
+                            <h3>Якій властивості відповідає тег HTML div за замовчуванням??</h3>
+                        </label>
+                        <div class="Pitannya_var_vidpovidi">
+                            <label for="pick1"><input type="radio" name="pick" id="pick71"> display: block</label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick72"> display: inline</label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick73"> display: flex</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 8 питання-->
+                <div id="Pitannya8" hidden>
+                    <h1>8 Запитання</h1>
+                    <form  id="Pitannya8_form">
+                        <label>
+                            <h3>Як визначити, щоб блок був центрованим відносно батьківського контейнера?
+                            </h3>
+                        </label>
+                        <div class="Pitannya_var_vidpovidi">
+                            <label for="pick1"><input type="radio" name="pick" id="pick81">text-align: center</label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick82"> margin: auto</label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick83">float: center</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 9 питання-->
+                <div id="Pitannya9" hidden>
+                    <h1>9 Запитання</h1>
+                    <form  id="Pitannya9_form">
+                        <label>
+                            <h3>Які властивості властиві для CSS Grid?(правильних більше одного)</h3>
+                        </label>
+                        <div class="Pitannya9_vidpovidi_checkbox">
+                            <label><input type="checkbox" id="pick91">grid-template-columns</label>
+                            <label><input type="checkbox" id="pick92">grid-gap</label>
+                            <label><input type="checkbox" id="pick93">grid-align</label>
+                            <label><input type="checkbox" id="pick94">grid-row</label>
+                            <label><input type="checkbox" id="pick95">grid-flow</label>
+                            <label><input type="checkbox" id="pick96">grid-row-gap</label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 10 питання-->
+                <div id="Pitannya10" hidden>
+                    <h1>10 Запитання!</h1>
+                    <form id="Pitannya10_form">
+                        <label >
+                            <h3>  Який тег відповідає блоку "Позначення структури сторінки"?</h3>
+                        </label>
+                        <div class="Pitannya10_var_vidpovidi">
+                            <label for="pick1"><input type="radio" name="pick" id="pick101">
+                                 HTML
+                            </label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick102">
+                                 CSS
+                            </label>
+                            <label for="pick3"><input type="radio" name="pick" id="pick103">
+                                 JavaScript
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- наступне питання-->
+                <button id="next__button" onclick="nextQuestion()">
+                    <p>Відповісти</p>
+                </button>
+            </div>
+
+            <!-- результат тесту-->
+            <section>
+                <div id="resultTest" hidden>
+                    <h1>Результат</h1>
+                    <p id="PIBuchnya">ПІБ Учня: </p>
+                    <p id="resGroup">Група: </p>
+                    <p id="resRating">Оцінка: </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
